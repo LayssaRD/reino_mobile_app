@@ -48,4 +48,4 @@ Este projeto é utilizado como ambiente de aprendizado contínuo em Flutter. Ao 
 
 **Layssa Rodrigues Alves** 
 Estudantes de Ciência da Computação – UTFPR
-- 📧 Layssa Rodrigues[layssarodrigues@alunos.utfpr.edu.br]
+- 📧 Layssa Rodrigues: layssarodrigues@alunos.utfpr.edu.br
