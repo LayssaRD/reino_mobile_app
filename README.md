@@ -1,17 +1,51 @@
-# reino_mobile_app
+# 📱 Flutter Practice App
 
-A new Flutter project.
+Este repositório contém um projeto desenvolvido com Flutter com o objetivo de praticar e evoluir no desenvolvimento de aplicativos móveis.
 
-## Getting Started
+## 🚀 Sobre o projeto
 
-This project is a starting point for a Flutter application.
+Este projeto é utilizado como ambiente de aprendizado contínuo em Flutter. Ao longo do tempo, novas funcionalidades, melhorias de interface e conceitos serão adicionados conforme o avanço nos estudos.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 🎯 Objetivos
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Aprender e praticar Flutter e Dart
+- Compreender a estrutura de um projeto mobile
+- Explorar widgets e construção de interfaces
+- Implementar interatividade com gerenciamento de estado
+- Evoluir o projeto progressivamente
+
+---
+
+## 🧪 Funcionalidades atuais
+
+- Interface básica com layout estruturado
+- Uso de widgets como Text, Icon e Button
+- Interação com o usuário (clique em botão)
+- Alteração dinâmica de conteúdo com `setState()`
+
+---
+
+## 🔮 Próximas melhorias
+
+- Melhorias no design da interface
+- Organização de código em múltiplos arquivos
+- Navegação entre telas
+- Integração com APIs
+- Persistência de dados
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- Flutter
+- Dart
+
+---
+
+## Desenvolvido por
+
+**Layssa Rodrigues Alves** 
+Estudantes de Ciência da Computação – UTFPR
+- 📧 Layssa Rodrigues[layssarodrigues@alunos.utfpr.edu.br]
