@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       textAlign: TextAlign.center,
                       style: const TextStyle(fontSize: 18),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 16),
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
@@ -113,15 +113,43 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            const SizedBox(height: 14),
+            Card(
+              elevation: 6,
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Icon(Icons.code, size: 40, color: Colors.blueGrey),
+                    SizedBox(height: 12),
+                    Text(
+                      'Habilidades',
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 8),
+                    Text('Flutter • Python • Data Science • Data Analysis'),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          final mensagem = texto == 'Estudante de Ciência da Computação ⚛️'
+              ? 'Modo: Estudante de Computação ⚛️'
+              : 'Modo: Cientista de Dados 🎲';
+
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Você clicou no botão ❤️'),
-              duration: Duration(seconds: 3),
+            SnackBar(
+              content: Text(mensagem),
+              duration: const Duration(seconds: 3),
             ),
           );
         },
