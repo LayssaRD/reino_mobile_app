@@ -11,8 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent),
+        useMaterial3: true,
+        colorSchemeSeed: Colors.lightBlueAccent,
       ),
       home: const MyHomePage(title: 'Bem-Vindo ao meu primeiro App!'),
     );
@@ -37,49 +39,78 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: const Color(0xFF006994),
+        foregroundColor: Colors.white,
         title: Text(widget.title),
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          tooltip: 'Menu principal',
+          onPressed: () {},
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            tooltip: 'Sobre o app',
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.person, size: 80, color: Colors.blueGrey),
-
-            SizedBox(height: 30),
-
-            Text(
-              'Olá, eu sou a Layssa!',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-
-            SizedBox(height: 10),
-
-            Text(
-              texto,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18),
-            ),
-
-            SizedBox(height: 20),
-
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  if (texto == 'Estudante de Ciência da Computação ⚛️') {
-                    texto = 'Aspirante a Cientista de Dados 🎲';
-                  } else {
-                    texto = 'Estudante de Ciência da Computação ⚛️';
-                  }
-                });
-              },
-              style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                backgroundColor: Colors.lightBlueAccent,
+            Card(
+              elevation: 6,
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
               ),
-              child: Text(
-                'Toque aqui 👆🏽',
-                style: TextStyle(fontSize: 16, color: Colors.black),
+              child: Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.person, size: 80, color: Color(0xFF006994),),
+                    const SizedBox(height: 16),
+                    const Text(
+                      'Olá, eu sou a Layssa!',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      texto,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 18),
+                    ),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          if (texto ==
+                              'Estudante de Ciência da Computação ⚛️') {
+                            texto = 'Aspirante a Cientista de Dados 🎲';
+                          } else {
+                            texto = 'Estudante de Ciência da Computação ⚛️';
+                          }
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 30,
+                          vertical: 15,
+                        ),
+                        backgroundColor: const Color(0xFF006994),
+                      ),
+                      child: const Text(
+                        'Toque aqui 👆🏽',
+                        style: TextStyle(fontSize: 16, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -87,10 +118,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text('Você clicou no botão ❤️')));
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Você clicou no botão ❤️'),
+              duration: Duration(seconds: 3),
+            ),
+          );
         },
+        tooltip: 'Curtir',
         child: const Icon(Icons.favorite),
       ),
     );
