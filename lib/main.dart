@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reino_mobile_app/lista_habilidades_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,6 +53,18 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: const Icon(Icons.info_outline),
             tooltip: 'Sobre o app',
             onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.list),
+            tooltip: 'Ver habilidades',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const ListaHabilidadesPage(),
+                ),
+              );
+            },
           ),
         ],
       ),
